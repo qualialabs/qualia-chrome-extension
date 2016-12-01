@@ -1,0 +1,50 @@
+{
+
+  "name"             : "Qualia",
+  "version"          : "1.0",
+  "description"      : "Qualia launcher",
+  "manifest_version" : 2,
+  "default_locale"   : "en",
+
+  "icons": {
+    "16"  : "icons/icon16.png",
+    "48"  : "icons/icon48.png",
+    "128" : "icons/icon128.png"
+  },
+
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "cookies",
+    "contextMenus",
+    "tabs",
+    "topSites",
+    "bookmarks",
+    "history",
+    "storage",
+    "unlimitedStorage"
+  ],
+
+  "web_accessible_resources": [
+    "lib/jquery.js",
+    "src/options.html",
+    "src/chrome.js"
+  ],
+
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+
+  "background": {
+    "scripts": [
+      "lib/jquery.js",
+      "src/chrome.js"
+    ]
+  },
+
+  "options_page" : "src/options.html",
+
+  "browser_action": {
+    "default_icon"  :  "icons/icon19.png",
+    "default_title" :  "Go to Qualia"
+  }
+
+}
